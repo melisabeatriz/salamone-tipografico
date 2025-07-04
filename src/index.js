@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import About from "./pages/About";
+import ComingSoon from "./pages/ComingSoon";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router";
 const router = createBrowserRouter([
@@ -13,6 +14,14 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <About />,
+  },
+  {
+    path: "/cartografia",
+    element: <ComingSoon />,
+  },
+  {
+    path: "/mapa",
+    element: <ComingSoon />,
   },
 ]);
 

@@ -24,7 +24,6 @@ function App() {
   return (
     <div className="App">
       <ScrollContext.Provider value={y}>
-        <NavBar />
         <Home />
       </ScrollContext.Provider>
     </div>

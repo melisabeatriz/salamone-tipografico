@@ -1,8 +1,9 @@
 import { useState, useEffect, useContext } from "react";
 import NavBar from "../components/NavBar";
+import ScrollDown from "../components/ScrollDown";
 import { ScrollContext } from "../App";
 import Footer from "../components/Footer";
-import aMmChillar from "../img/A_mmChillar37.svg";
+import aMmChillar from "../img/as/A_mmChillar37.svg";
 import picMmChillar from "../img/pic-01_mmChillar37.jpg";
 import picPmGonzalesChaves from "../img/pic-01_PmGonzalesChaves39.jpg";
 
@@ -30,8 +31,6 @@ const members = [
     memberTitle: "Adscripto estudiante",
   },
 ];
-
-const ScrollDown = () => <div className="scroll-down"></div>;
 
 const Member = ({ name, title }) => (
   <div className="member">
