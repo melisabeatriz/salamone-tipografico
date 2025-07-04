@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 import "./Home.css";
 import ScrollDown from "../components/ScrollDown";
 import signature from "../img/salamone_firma_vector.svg";
@@ -13,7 +15,6 @@ import apmAlberti37 from "../img/as/A-pmAlberti37.svg";
 import apmAlberti37Photo from "../img/as/A-pmAlberti37_photo.png";
 import aPmGuamini38 from "../img/as/A-PmGuamini38.svg";
 import aPmGuamini38Photo from "../img/as/A-PmGuamini38_photo.png";
-import Footer from "../components/Footer";
 
 const letters = [
   {
@@ -53,10 +54,16 @@ const HomeLetter = ({ imgSrc, description, photo }) => (
 
 const Home = () => {
   const [y, setY] = useState(window.scrollY);
+  const [showNavbar, setShowNavbar] = useState(true);
   const windowHeight = window.innerHeight;
 
   const handleNavigation = (e) => {
     const window = e.currentTarget;
+    if (window.scrollY > y) {
+      setShowNavbar(false);
+    } else {
+      setShowNavbar(true);
+    }
     setY(window.scrollY);
   };
 
@@ -70,11 +77,11 @@ const Home = () => {
 
   const findPhotoPosition = () => {
     if (y < windowHeight) return 0;
-    console.log(y);
     return -(y - windowHeight);
   };
   return (
     <div className="home">
+      <NavBar show={showNavbar} />
       <div className="home-welcome-screen">
         <img src={signature} width="1200px" alt="salamone" />
         <div className="title-container">
@@ -89,8 +96,8 @@ const Home = () => {
               <i>Un acercamiento a los contextos del patrimonio cultural.</i>
             </p>
             <p>Universidad Nacional de Lanús, Buenos Aires, Argentina.</p>
+            <ScrollDown />
           </div>
-          <ScrollDown />
         </div>
       </div>
       <div

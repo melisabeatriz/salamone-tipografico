@@ -40,7 +40,7 @@
 .title-container {
   display: flex;
   animation-name: title-visibility;
-  animation-duration: 4s;
+  animation-duration: 2s;
 }
 
 .home-a-catalogue-container {
@@ -52,8 +52,6 @@
   align-items: center;
   width: 100vw;
   transition: all 1s;
-  /* overflow: hidden; */
-  /* align-items: center; */
 }
 
 .home-a-catalogue {
@@ -61,7 +59,6 @@
   margin-left: 100px;
   display: flex;
   align-items: center;
-  /* overflow-y: hidden; */
 }
 
 .home-a-catalogue .a-container {

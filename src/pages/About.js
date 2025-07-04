@@ -39,10 +39,16 @@ const Member = ({ name, title }) => (
 );
 
 const About = () => {
+  const [showNavbar, setShowNavbar] = useState(true);
   const [y, setY] = useState(window.scrollY);
 
   const handleNavigation = (e) => {
     const window = e.currentTarget;
+    if (window.scrollY > y) {
+      setShowNavbar(false);
+    } else {
+      setShowNavbar(true);
+    }
     setY(window.scrollY);
   };
 
@@ -78,7 +84,7 @@ const About = () => {
 
   return (
     <>
-      <NavBar y={y} />
+      <NavBar show={showNavbar} />
       <div className="about-page">
         <div className="about-description">
           <div

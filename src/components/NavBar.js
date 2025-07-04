@@ -1,27 +1,41 @@
 import "./NavBar.css";
 import homeIcon from "../img/home-icon.svg";
 
-const NavBar = ({ y }) => {
-  const findOpacity = () => {
-    if (y < 100) return 100;
-    return 200 - y;
-  };
+const navigationItems = [
+  { url: "/about", description: "acerca del proyecto" },
+  { url: "/cartografia", description: "cartografía letras" },
+  { url: "/mapa", description: "mapa" },
+  { url: "/", description: "inicio" },
+];
+
+const NavBarItem = ({ url, description }) => {
+  const currentItem = window.location.pathname;
+  const isCurrentItem = currentItem === url;
+  return (
+    <li>
+      <a
+        style={{
+          fontWeight: isCurrentItem ? 900 : 500,
+        }}
+        href={url}
+      >
+        {description}
+      </a>
+    </li>
+  );
+};
+
+const NavBar = ({ show }) => {
   return (
     <div>
-      <nav>
+      <nav style={{ opacity: show ? "100%" : "0" }}>
         <a href="/">
           <img src={homeIcon} width="50px" alt="Inicio" />
         </a>
-        <ul style={{ opacity: `${findOpacity()}%` }}>
-          <li>
-            <a href="/about">acerca del proyecto</a>
-          </li>
-          <li>
-            <a href="/cartografia">cartografía letras</a>
-          </li>
-          <li>
-            <a href="/mapa">mapa</a>
-          </li>
+        <ul>
+          {navigationItems.map((item, i) => (
+            <NavBarItem key={i} url={item.url} description={item.description} />
+          ))}
         </ul>
       </nav>
     </div>
