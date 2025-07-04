@@ -1,0 +1,16 @@
+.home {
+  background-color: #dcdcdc;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  max-width: 900px;
+  color: #4d4d4d;
+}
+
+.italic {
+  font-style: italic;
+}

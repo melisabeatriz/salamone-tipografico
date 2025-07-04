@@ -1,0 +1,40 @@
+nav ul,
+nav {
+  display: flex;
+}
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+nav ul:hover {
+  transition: all 1s;
+  opacity: 100% !important;
+}
+
+nav {
+  position: fixed;
+  z-index: 500;
+  width: 100%;
+  top: 0;
+  align-items: end;
+}
+
+nav li {
+  list-style: none;
+  margin: 0px 10px;
+}
+
+nav li a {
+  transition: all 1s;
+  border-bottom: transparent 1.5px solid;
+}
+
+nav li:hover a {
+  transition: all 1s;
+
+  border-bottom: #181818 1.5px solid;
+}
+
+nav img {
+  margin: 10px 20px 0 10px;
+}

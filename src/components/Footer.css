@@ -1,0 +1,15 @@
+footer {
+  width: 100%;
+  background-color: #595959;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  z-index: 100;
+}
+
+footer a {
+  color: #fff;
+  margin-top: 10px;
+}
