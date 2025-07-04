@@ -1,7 +1,6 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import NavBar from "../components/NavBar";
 import ScrollDown from "../components/ScrollDown";
-import { ScrollContext } from "../App";
 import Footer from "../components/Footer";
 import aMmChillar from "../img/as/A_mmChillar37.svg";
 import picMmChillar from "../img/pic-01_mmChillar37.jpg";
@@ -214,7 +213,6 @@ const About = () => {
                 turismo y patrimonio.
               </li>
             </ul>
-            {/* <button onClick={() => console.log(y)}>ddsfds</button> */}
             <h3>Equipo de investigación</h3>
             <p>
               integrado por docentes, estudiantes y graduados de la Lic. en
