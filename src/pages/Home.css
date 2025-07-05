@@ -87,6 +87,10 @@
   opacity: 100%;
 }
 
+.letter-reference-photo:hover {
+  opacity: 100%;
+}
+
 .home-a-catalogue a {
   width: 200px;
 }

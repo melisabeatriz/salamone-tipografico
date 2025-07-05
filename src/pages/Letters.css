@@ -11,5 +11,14 @@
 
 .mapping-letter {
   width: 400px;
+}
+
+.letter-modal {
+  width: 100vw;
+  height: 100vh;
   background-color: pink;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
