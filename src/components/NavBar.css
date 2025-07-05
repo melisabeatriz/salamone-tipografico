@@ -18,6 +18,7 @@ nav {
   padding-bottom: 10px;
   justify-content: space-between;
   transition: all 1s;
+  min-height: 66px;
 }
 
 nav li {
