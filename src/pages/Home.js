@@ -136,7 +136,7 @@ const Home = () => {
               <a href="/mapa">mapa</a>
             </li>
           </ul>
-          <img src={homeFooterPhoto} />
+          <img src={homeFooterPhoto} alt="" />
           <Footer />
         </div>
       </div>

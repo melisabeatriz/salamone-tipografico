@@ -4,8 +4,10 @@ import "./index.css";
 import App from "./App";
 import About from "./pages/About";
 import ComingSoon from "./pages/ComingSoon";
+import Map from "./pages/Map";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -21,7 +23,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/mapa",
-    element: <ComingSoon />,
+    element: <Map />,
   },
 ]);
 
