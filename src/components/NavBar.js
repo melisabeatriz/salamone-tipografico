@@ -16,6 +16,7 @@ const NavBarItem = ({ url, description }) => {
       <a
         style={{
           fontWeight: isCurrentItem ? 900 : 500,
+          pointerEvents: isCurrentItem ? "none" : "auto",
         }}
         href={url}
       >
@@ -27,18 +28,16 @@ const NavBarItem = ({ url, description }) => {
 
 const NavBar = ({ show }) => {
   return (
-    <div>
-      <nav style={{ opacity: show ? "100%" : "0" }}>
-        <a href="/">
-          <img src={homeIcon} width="50px" alt="Inicio" />
-        </a>
-        <ul>
-          {navigationItems.map((item, i) => (
-            <NavBarItem key={i} url={item.url} description={item.description} />
-          ))}
-        </ul>
-      </nav>
-    </div>
+    <nav style={{ opacity: show ? "100%" : "0" }}>
+      <a href="/">
+        <img src={homeIcon} width="50px" alt="Inicio" />
+      </a>
+      <ul>
+        {navigationItems.map((item, i) => (
+          <NavBarItem key={i} url={item.url} description={item.description} />
+        ))}
+      </ul>
+    </nav>
   );
 };
 

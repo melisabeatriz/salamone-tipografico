@@ -1,0 +1,15 @@
+.map-container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 100px;
+  box-sizing: border-box;
+  background-color: #dcdcdc;
+}
+
+.map-container iframe {
+  border: 0;
+  width: 1200px;
+}
