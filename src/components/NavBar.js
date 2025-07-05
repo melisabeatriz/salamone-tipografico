@@ -17,6 +17,7 @@ const NavBarItem = ({ url, description }) => {
         style={{
           fontWeight: isCurrentItem ? 900 : 500,
           pointerEvents: isCurrentItem ? "none" : "auto",
+          ...(isCurrentItem && { borderBottom: "transparent 1.5px solid" }),
         }}
         href={url}
       >
