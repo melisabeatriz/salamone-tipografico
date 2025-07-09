@@ -1,6 +1,6 @@
-.letters-container {
+.mapping-page {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -10,15 +10,55 @@
 }
 
 .mapping-letter {
-  width: 400px;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.mapping-letter img {
+  height: 100%;
 }
 
 .letter-modal {
+  background-color: #bfbfbf;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.letter-modal img {
+  margin-top: 40px;
+  width: 500px;
+  height: 500px;
+}
+
+.layover {
   width: 100vw;
   height: 100vh;
-  background-color: pink;
-  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0000008f;
+  z-index: 900;
   position: fixed;
   top: 0;
   left: 0;
+}
+
+.letter-modal button {
+  border: 0;
+  appearance: none;
+  background-color: transparent;
+  font-size: 30px;
+  align-self: flex-end;
+}
+
+.letter-modal span {
+  font-style: italic;
+}
+.letters-container {
+  display: flex;
+  gap: 30px;
 }
